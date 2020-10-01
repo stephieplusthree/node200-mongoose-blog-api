@@ -4,9 +4,9 @@ const Schema = mongoose.Schema;
 
 // Creates a new Mongoose Schema with two properties
 const UserSchema = new Schema({
-    firstName: { type: string, required: true}, // firstName property is a string and required
-    lastName: { type: string, required: true}, // lastName property is a string and required
-    email: { type: string, required: true}, // email property is a string and required
+    firstName: { type: String, required: true}, // firstName property is a string and required
+    lastName: { type: String, required: true}, // lastName property is a string and required
+    email: { type: String, required: true}, // email property is a string and required
 
     // New property
     social: {
