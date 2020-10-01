@@ -16,7 +16,15 @@ router.get('/:_id', (req, res) => {
         .then(users => {
             if (users === null) res.status(404).end()
             else res.status(200).json(users);
-        })
+        });
+});
+
+router.post('/', (req, res) => {
+    const newUser = new User(req.body);
+    newUser.save()
+    .then(users => {
+        res.status(201).json(users);
+    });
 });
 
 module.exports = router;
