@@ -11,9 +11,10 @@ mongoose.Promise = Promise;
 
 const app = express();
 
-
 // bodyParser to detect json
 app.use(bodyParser.json());
+app.use('/api/users', require('./routes/users'));
+
 
 //route
 app.get('/', (req, res) => {
