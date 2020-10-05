@@ -60,7 +60,7 @@ router.post('/', (req, res) => {
 
 router.put('/:_id', (req, res) => {
     Blog
-        .findByIdAndUpdate(req.params)
+        .findByIdAndUpdate(req.params, req.body)
         .then(blogs => {
             if (blogs === null) res.status(404).end()
             else res.status(204).json(blogs);
